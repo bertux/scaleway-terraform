@@ -1,7 +1,7 @@
 {
   "variables": {
-    "api_access_key": "SCWFKX0QHPX66006AAFV",
-    "api_token": "cc2da263-bfd2-43b6-a02c-986d60140f7d"
+    "api_access_key": "{{ env `SCW_ACCESS_KEY` }}",
+    "api_token": "{{ env `SCW_SECRET_KEY` }}",
   },
   "builders": [
     {
@@ -19,14 +19,14 @@
     }
   ],
   "provisioners": [
-   {   
+   {
      "type": "shell",
      "inline": [
          "sleep 30",
          "apt-get update",
          "apt-get -y upgrade",
          "apt-get install -y apache2"
-     ]   
-   }   
+     ]
+   }
  ]
 }
