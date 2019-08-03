@@ -14,7 +14,7 @@
       "image": "acf93867-88d9-40ee-99ea-6b2bb1ee8f0c",
       "region": "par1",
       "commercial_type": "START1-S",
-      "ssh_private_key_file": "/home/heber.aguilar/.ssh/id_rsa",
+      "ssh_private_key_file": "~/.ssh/id_rsa",
       "ssh_username": "root"
     }
   ],
