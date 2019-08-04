@@ -19,13 +19,8 @@
   ],
   "provisioners": [
    {
-     "type": "shell",
-     "inline": [
-         "sleep 30",
-         "apt-get update",
-         "apt-get -y upgrade",
-         "apt-get install -y apache2"
-     ]
+     "type": "ansible",
+     "playbook_file": "./playbook.yml"
    }
  ]
 }
