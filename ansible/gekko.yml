@@ -1,0 +1,17 @@
+---
+- hosts: all
+
+  tasks:
+    - name: gekko | Add apt key for nodesource
+      apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+    - name: gekko | Add repo for nodesource
+      apt_repository:
+        repo: 'deb https://deb.nodesource.com/node_8.x {{ ansible_distribution_release }} main'
+        update_cache: yes
+
+    - name: gekko | Install NodeJS by APT
+      apt:
+        name: "nodejs"
+        state: present
+        update_cache: no
